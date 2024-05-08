@@ -1,0 +1,120 @@
+$primary: red;
+$secundary: orange;
+$clear: gray;
+$font1: Tahoma, Arial;
+$font2: Arial, Verdana;
+$size1: 20px;
+$size2: 15px;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: $size1 $font1;
+    background: $secundary;
+}
+
+.header {
+    width: 100%;
+    position: fixed;
+    background: $primary;
+    font-weight: bold;
+    padding: 20px;
+
+    & &-nav {
+        float: right;
+    }
+
+    ul {
+        list-style: none;
+        margin-top: 5px;
+    }
+
+    li {
+        display: inline-block;
+    }
+
+    a {
+        margin: 20px;
+        padding: 10px;
+        color: $clear;
+        background: $secundary;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: all 0.75s;
+
+        &:hover {
+            background: $primary;
+
+        }
+    }
+}
+
+.banner {
+    & &-img {
+        width: 100%;
+    }
+}
+
+.container {
+    width: 1000px;
+    margin: 20px auto;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    & &-card {
+        width: 24%;
+        margin: 3px;
+        box-shadow: 0 0 10px #CCC;
+        border-radius: 5px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    & &-img {
+        width: 100%;
+        border-radius: 5px 5px 0 0;
+    }
+}
+.btn {
+    text-decoration: none;
+    background: $secundary;
+    color: $clear;
+    padding: 10px;
+    border-radius: 5px;
+    &:hover {
+        background: $primary;
+    }
+}
+
+p {
+    margin: 15px;
+    line-height: 30px;
+}
+
+main {
+    width: 1000px;
+    margin: auto;
+    font-family: $font2;
+
+    h1 {
+        font-size: $size2;
+    }
+
+    p {
+        font-family: $font1;
+    }
+}
+
+footer {
+    background: $primary;
+    font: $size2 $font1;
+
+    p {
+        text-align: center;
+    }
+}
