@@ -1,5 +1,5 @@
 $primary: red;
-$secundary: orange;
+$secondary: orange;
 $clear: gray;
 $font1: Tahoma, Arial;
 $font2: Arial, Verdana;
@@ -13,81 +13,143 @@ $size2: 15px;
 
 body {
     font: $size1 $font1;
-    background: $secundary;
+    background: $secondary;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif; // ordem de fontes desejadas
+    font-size: 16px;
+    background-color: black; // cor do fundo
+    color: white; // cor da letra
+    padding-top: 100px;
 }
 
-.header {
+.header,
+header {
     width: 100%;
     position: fixed;
     background: $primary;
     font-weight: bold;
     padding: 20px;
+    background: #121212;
+    padding: 5px;
+    box-sizing: border-box;
+    display: inline-block;
+    top: 0;
 
-    & &-nav {
+    &-nav,
+    nav {
         float: right;
-    }
-
-    ul {
-        list-style: none;
-        margin-top: 5px;
-    }
-
-    li {
         display: inline-block;
+        margin: 20px;
+
+        ul {
+            list-style: none;
+            margin-top: 5px;
+
+            li {
+                display: inline-block;
+                margin: 15px;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    font-weight: 700;
+                    transition: all 0.5s;
+                    margin: 20px;
+                    padding: 10px;
+                    color: $clear;
+                    background: $secondary;
+                    border-radius: 5px;
+
+                    &:hover {
+                        color: red;
+                        background: $primary;
+                    }
+                }
+            }
+        }
     }
 
-    a {
-        margin: 20px;
-        padding: 10px;
-        color: $clear;
-        background: $secundary;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: all 0.75s;
-
-        &:hover {
-            background: $primary;
-
-        }
+    img {
+        width: 100px; // largura
+        height: 100px; // altura
+        border-radius: 50%; // deixar a foto arredondada
+        border: 5px solid red; // cor da borda
     }
 }
 
 .banner {
-    & &-img {
+    &-img {
+        width: 100%;
+    }
+
+    img {
         width: 100%;
     }
 }
 
-.container {
+.container,
+main {
     width: 1000px;
     margin: 20px auto;
+    font-family: $font2;
+
+    h1 {
+        text-align: center;
+        font-size: $size2;
+        font: 24px "IM Fell DW Pica SC";
+        color: #fb0909;
+    }
+
+    p {
+        text-align: center;
+        font-family: $font1;
+    }
 }
 
-.flex {
+.flex,
+.grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    & &-card {
+    grid-template-columns: repeat(3, 33%);
+
+    &-card,
+    .coluna {
         width: 24%;
         margin: 3px;
         box-shadow: 0 0 10px #CCC;
         border-radius: 5px;
         text-align: center;
         margin-bottom: 20px;
+        border: 1px solid #ccc;
+
+        img {
+            width: 100%;
+            border-radius: 5px 5px 0 0;
+            height: 70%;
+            box-shadow: 0 0 10px #ccc;
+        }
     }
-    & &-img {
+
+    &-img {
         width: 100%;
         border-radius: 5px 5px 0 0;
     }
 }
+
 .btn {
+    background: #F00;
+    color: #FFF;
     text-decoration: none;
-    background: $secundary;
-    color: $clear;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 10px;
+    display: block;
+    text-align: center;
+
     &:hover {
-        background: $primary;
+        background: rgb(207, 228, 14);
+        color: rgb(0, 0, 0);
     }
 }
 
@@ -96,25 +158,92 @@ p {
     line-height: 30px;
 }
 
-main {
-    width: 1000px;
-    margin: auto;
-    font-family: $font2;
-
-    h1 {
-        font-size: $size2;
-    }
-
-    p {
-        font-family: $font1;
-    }
+.botao {
+    text-align: center;
 }
 
 footer {
     background: $primary;
+    color: #FFF;
+    padding: 20px 0;
     font: $size2 $font1;
+    background: #121212;
 
     p {
         text-align: center;
+    }
+
+    a {
+        background: #FFF;
+        text-decoration: none;
+        margin: 30px;
+        color: rgb(0, 0, 0);
+        border-radius: 100px;
+        width: 70px;
+        height: 70px;
+        display: inline-block;
+        line-height: 95px;
+        transition: all 0.5s;
+
+        &:hover {
+            background: red;
+            color: white;
+        }
+    }
+}
+
+.menu {
+    display: none;
+}
+
+.mostrar {
+    display: block;
+}
+
+
+
+@media (max-width: 420px) {
+    .banner {
+        display: none;
+    }
+
+    header {
+        img {
+            display: none;
+            width: 300px;
+        }
+
+        nav {
+            display: none;
+
+            ul {
+                display: block;
+                text-align: center;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    main {
+        width: 100%;
+    }
+
+    .grid {
+        grid-template-columns: 100%;
+    }
+
+    .menu {
+        display: block;
+        border: 1px solid red;
+        padding: 10px 15px;
+        color: white;
+        float: right;
+        margin-top: 15px;
+        border-radius: 5px;
     }
 }

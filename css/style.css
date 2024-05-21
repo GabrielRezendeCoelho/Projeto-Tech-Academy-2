@@ -6,74 +6,151 @@
 body {
   font: 20px Tahoma, Arial;
   background: orange;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+  padding-top: 100px;
 }
 
-.header {
+.header,
+header {
   width: 100%;
   position: fixed;
   background: red;
   font-weight: bold;
   padding: 20px;
+  background: #121212;
+  padding: 5px;
+  box-sizing: border-box;
+  display: inline-block;
+  top: 0;
 }
-.header .header-nav {
+.header-nav,
+.header nav,
+header-nav,
+header nav {
   float: right;
+  display: inline-block;
+  margin: 20px;
 }
-.header ul {
+.header-nav ul,
+.header nav ul,
+header-nav ul,
+header nav ul {
   list-style: none;
   margin-top: 5px;
 }
-.header li {
+.header-nav ul li,
+.header nav ul li,
+header-nav ul li,
+header nav ul li {
   display: inline-block;
+  margin: 15px;
 }
-.header a {
+.header-nav ul li a,
+.header nav ul li a,
+header-nav ul li a,
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  transition: all 0.5s;
   margin: 20px;
   padding: 10px;
   color: gray;
   background: orange;
-  text-decoration: none;
   border-radius: 5px;
-  transition: all 0.75s;
 }
-.header a:hover {
+.header-nav ul li a:hover,
+.header nav ul li a:hover,
+header-nav ul li a:hover,
+header nav ul li a:hover {
+  color: red;
   background: red;
 }
+.header img,
+header img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid red;
+}
 
-.banner .banner-img {
+.banner-img {
+  width: 100%;
+}
+.banner img {
   width: 100%;
 }
 
-.container {
+.container,
+main {
   width: 1000px;
   margin: 20px auto;
+  font-family: Arial, Verdana;
+}
+.container h1,
+main h1 {
+  text-align: center;
+  font-size: 15px;
+  font: 24px "IM Fell DW Pica SC";
+  color: #fb0909;
+}
+.container p,
+main p {
+  text-align: center;
+  font-family: Tahoma, Arial;
 }
 
-.flex {
+.flex,
+.grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  grid-template-columns: repeat(3, 33%);
 }
-.flex .flex-card {
+.flex-card,
+.flex .coluna,
+.grid-card,
+.grid .coluna {
   width: 24%;
   margin: 3px;
   box-shadow: 0 0 10px #CCC;
   border-radius: 5px;
   text-align: center;
   margin-bottom: 20px;
+  border: 1px solid #ccc;
 }
-.flex .flex-img {
+.flex-card img,
+.flex .coluna img,
+.grid-card img,
+.grid .coluna img {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  height: 70%;
+  box-shadow: 0 0 10px #ccc;
+}
+.flex-img,
+.grid-img {
   width: 100%;
   border-radius: 5px 5px 0 0;
 }
 
 .btn {
+  background: #F00;
+  color: #FFF;
   text-decoration: none;
-  background: orange;
-  color: gray;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 10px;
+  display: block;
+  text-align: center;
 }
 .btn:hover {
-  background: red;
+  background: #cfe40e;
+  color: black;
 }
 
 p {
@@ -81,24 +158,84 @@ p {
   line-height: 30px;
 }
 
-main {
-  width: 1000px;
-  margin: auto;
-  font-family: Arial, Verdana;
-}
-main h1 {
-  font-size: 15px;
-}
-main p {
-  font-family: Tahoma, Arial;
+.botao {
+  text-align: center;
 }
 
 footer {
   background: red;
+  color: #FFF;
+  padding: 20px 0;
   font: 15px Tahoma, Arial;
+  background: #121212;
 }
 footer p {
   text-align: center;
+}
+footer a {
+  background: #FFF;
+  text-decoration: none;
+  margin: 30px;
+  color: black;
+  border-radius: 100px;
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+  line-height: 95px;
+  transition: all 0.5s;
+}
+footer a:hover {
+  background: red;
+  color: white;
+}
+
+.menu {
+  display: none;
+}
+
+.mostrar {
+  display: block;
+}
+
+@media (max-width: 420px) {
+  .banner {
+    display: none;
+  }
+
+  header img {
+    display: none;
+    width: 300px;
+  }
+  header nav {
+    display: none;
+  }
+  header nav ul {
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  header nav ul li {
+    width: 100%;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: 100%;
+  }
+
+  .menu {
+    display: block;
+    border: 1px solid red;
+    padding: 10px 15px;
+    color: white;
+    float: right;
+    margin-top: 15px;
+    border-radius: 5px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
