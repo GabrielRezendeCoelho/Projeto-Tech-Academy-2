@@ -1,241 +1,141 @@
+@charset "UTF-8";
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
-}
-
-body {
-  font: 20px Tahoma, Arial;
-  background: orange;
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  background-color: black;
-  color: white;
-  padding-top: 100px;
-}
-
-.header,
-header {
-  width: 100%;
-  position: fixed;
-  background: red;
-  font-weight: bold;
-  padding: 20px;
-  background: #121212;
-  padding: 5px;
   box-sizing: border-box;
-  display: inline-block;
-  top: 0;
 }
-.header-nav,
-.header nav,
-header-nav,
-header nav {
-  float: right;
-  display: inline-block;
-  margin: 20px;
+
+/* Variáveis */
+/* Estilo do corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
 }
-.header-nav ul,
-.header nav ul,
-header-nav ul,
-header nav ul {
+
+/* Cabeçalho */
+.header {
+  background-color: #444;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo img {
+  width: 50px;
+}
+
+.header-nav ul {
   list-style: none;
-  margin-top: 5px;
+  display: flex;
+  gap: 20px;
 }
-.header-nav ul li,
-.header nav ul li,
-header-nav ul li,
-header nav ul li {
-  display: inline-block;
-  margin: 15px;
-}
-.header-nav ul li a,
-.header nav ul li a,
-header-nav ul li a,
-header nav ul li a {
+.header-nav ul li a {
+  color: #fff;
   text-decoration: none;
-  color: white;
-  font-weight: 700;
-  transition: all 0.5s;
-  margin: 20px;
-  padding: 10px;
-  color: gray;
-  background: orange;
-  border-radius: 5px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
 }
-.header-nav ul li a:hover,
-.header nav ul li a:hover,
-header-nav ul li a:hover,
-header nav ul li a:hover {
-  color: red;
-  background: red;
+.header-nav ul li a i {
+  margin-right: 8px;
 }
-.header img,
-header img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: 5px solid red;
+
+/* Banner */
+.banner {
+  width: 100%;
+  overflow: hidden;
 }
 
 .banner-img {
   width: 100%;
-}
-.banner img {
-  width: 100%;
+  height: auto;
 }
 
-.container,
-main {
-  width: 1000px;
+/* Container principal */
+.container {
+  max-width: 1200px;
   margin: 20px auto;
-  font-family: Arial, Verdana;
-}
-.container h1,
-main h1 {
-  text-align: center;
-  font-size: 15px;
-  font: 24px "IM Fell DW Pica SC";
-  color: #fb0909;
-}
-.container p,
-main p {
-  text-align: center;
-  font-family: Tahoma, Arial;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.flex,
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  grid-template-columns: repeat(3, 33%);
-}
-.flex-card,
-.flex .coluna,
-.grid-card,
-.grid .coluna {
-  width: 24%;
-  margin: 3px;
-  box-shadow: 0 0 10px #CCC;
-  border-radius: 5px;
+.container h2 {
   text-align: center;
   margin-bottom: 20px;
-  border: 1px solid #ccc;
-}
-.flex-card img,
-.flex .coluna img,
-.grid-card img,
-.grid .coluna img {
-  width: 100%;
-  border-radius: 5px 5px 0 0;
-  height: 70%;
-  box-shadow: 0 0 10px #ccc;
-}
-.flex-img,
-.grid-img {
-  width: 100%;
-  border-radius: 5px 5px 0 0;
 }
 
-.btn {
-  background: #F00;
-  color: #FFF;
-  text-decoration: none;
+/* Flexbox para cartões */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+.flex-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 250px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.flex-img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.flex-card p {
+  margin: 10px 0;
+}
+
+.flex-card .btn {
+  display: inline-block;
   padding: 10px 20px;
-  margin: 10px;
-  border-radius: 10px;
-  display: block;
-  text-align: center;
-}
-.btn:hover {
-  background: #cfe40e;
-  color: black;
+  background-color: #444;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
-p {
-  margin: 15px;
-  line-height: 30px;
+.flex-card .btn:hover {
+  background-color: #555;
 }
 
-.botao {
-  text-align: center;
-}
-
+/* Rodapé */
 footer {
-  background: red;
-  color: #FFF;
+  background-color: #444;
+  color: #fff;
+  text-align: center;
   padding: 20px 0;
-  font: 15px Tahoma, Arial;
-  background: #121212;
+  margin-top: 20px;
 }
 footer p {
-  text-align: center;
+  margin-bottom: 10px;
 }
 footer a {
-  background: #FFF;
+  color: #fff;
   text-decoration: none;
-  margin: 30px;
-  color: black;
-  border-radius: 100px;
-  width: 70px;
-  height: 70px;
-  display: inline-block;
-  line-height: 95px;
-  transition: all 0.5s;
+  margin: 0 10px;
+  transition: color 0.3s ease;
 }
-footer a:hover {
-  background: red;
-  color: white;
+footer a i {
+  transition: color 0.3s ease;
 }
-
-.menu {
-  display: none;
-}
-
-.mostrar {
-  display: block;
-}
-
-@media (max-width: 420px) {
-  .banner {
-    display: none;
-  }
-
-  header img {
-    display: none;
-    width: 300px;
-  }
-  header nav {
-    display: none;
-  }
-  header nav ul {
-    display: block;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-  }
-  header nav ul li {
-    width: 100%;
-  }
-
-  main {
-    width: 100%;
-  }
-
-  .grid {
-    grid-template-columns: 100%;
-  }
-
-  .menu {
-    display: block;
-    border: 1px solid red;
-    padding: 10px 15px;
-    color: white;
-    float: right;
-    margin-top: 15px;
-    border-radius: 5px;
-  }
+footer a:hover i {
+  color: #bbb;
 }
 
 /*# sourceMappingURL=style.css.map */

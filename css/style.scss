@@ -1,249 +1,156 @@
-$primary: red;
-$secondary: orange;
-$clear: gray;
-$font1: Tahoma, Arial;
-$font2: Arial, Verdana;
-$size1: 20px;
-$size2: 15px;
-
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
-}
-
-body {
-    font: $size1 $font1;
-    background: $secondary;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif; // ordem de fontes desejadas
-    font-size: 16px;
-    background-color: black; // cor do fundo
-    color: white; // cor da letra
-    padding-top: 100px;
-}
-
-.header,
-header {
-    width: 100%;
-    position: fixed;
-    background: $primary;
-    font-weight: bold;
-    padding: 20px;
-    background: #121212;
-    padding: 5px;
     box-sizing: border-box;
-    display: inline-block;
-    top: 0;
+}
 
-    &-nav,
-    nav {
-        float: right;
-        display: inline-block;
-        margin: 20px;
+/* Variáveis */
+$primary-color: #444;
+$secondary-color: #f4f4f4;
+$text-color: #333;
+$link-color: #fff;
+$hover-color: #555;
+$border-color: #ddd;
+$background-color: #f9f9f9;
+$box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+$transition: 0.3s ease;
 
-        ul {
-            list-style: none;
-            margin-top: 5px;
+/* Estilo do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: $secondary-color;
+    color: $text-color;
+    line-height: 1.6;
+}
 
-            li {
-                display: inline-block;
-                margin: 15px;
+/* Cabeçalho */
+.header {
+    background-color: $primary-color;
+    color: $link-color;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-                a {
-                    text-decoration: none;
-                    color: white;
-                    font-weight: 700;
-                    transition: all 0.5s;
-                    margin: 20px;
-                    padding: 10px;
-                    color: $clear;
-                    background: $secondary;
-                    border-radius: 5px;
+.header-logo img {
+    width: 50px;
+}
 
-                    &:hover {
-                        color: red;
-                        background: $primary;
-                    }
-                }
-            }
-        }
+.header-nav {
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
     }
 
-    img {
-        width: 100px; // largura
-        height: 100px; // altura
-        border-radius: 50%; // deixar a foto arredondada
-        border: 5px solid red; // cor da borda
+    ul li a {
+        color: $link-color;
+        text-decoration: none;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+    }
+
+    ul li a i {
+        margin-right: 8px;
     }
 }
 
+/* Banner */
 .banner {
-    &-img {
-        width: 100%;
-    }
-
-    img {
-        width: 100%;
-    }
+    width: 100%;
+    overflow: hidden;
 }
 
-.container,
-main {
-    width: 1000px;
+.banner-img {
+    width: 100%;
+    height: auto;
+}
+
+/* Container principal */
+.container {
+    max-width: 1200px;
     margin: 20px auto;
-    font-family: $font2;
-
-    h1 {
-        text-align: center;
-        font-size: $size2;
-        font: 24px "IM Fell DW Pica SC";
-        color: #fb0909;
-    }
-
-    p {
-        text-align: center;
-        font-family: $font1;
-    }
+    padding: 20px;
+    background-color: $link-color;
+    border-radius: 8px;
+    box-shadow: $box-shadow;
 }
 
-.flex,
-.grid {
+.container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Flexbox para cartões */
+.flex {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    grid-template-columns: repeat(3, 33%);
-
-    &-card,
-    .coluna {
-        width: 24%;
-        margin: 3px;
-        box-shadow: 0 0 10px #CCC;
-        border-radius: 5px;
-        text-align: center;
-        margin-bottom: 20px;
-        border: 1px solid #ccc;
-
-        img {
-            width: 100%;
-            border-radius: 5px 5px 0 0;
-            height: 70%;
-            box-shadow: 0 0 10px #ccc;
-        }
-    }
-
-    &-img {
-        width: 100%;
-        border-radius: 5px 5px 0 0;
-    }
+    gap: 20px;
+    justify-content: space-around;
 }
 
-.btn {
-    background: #F00;
-    color: #FFF;
-    text-decoration: none;
+.flex-card {
+    background-color: $background-color;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    width: 250px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.flex-img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid $border-color;
+    margin-bottom: 10px;
+}
+
+.flex-card p {
+    margin: 10px 0;
+}
+
+.flex-card .btn {
+    display: inline-block;
     padding: 10px 20px;
-    margin: 10px;
-    border-radius: 10px;
-    display: block;
-    text-align: center;
-
-    &:hover {
-        background: rgb(207, 228, 14);
-        color: rgb(0, 0, 0);
-    }
+    background-color: $primary-color;
+    color: $link-color;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color $transition;
 }
 
-p {
-    margin: 15px;
-    line-height: 30px;
+.flex-card .btn:hover {
+    background-color: $hover-color;
 }
 
-.botao {
-    text-align: center;
-}
-
+/* Rodapé */
 footer {
-    background: $primary;
-    color: #FFF;
+    background-color: $primary-color;
+    color: $link-color;
+    text-align: center;
     padding: 20px 0;
-    font: $size2 $font1;
-    background: #121212;
+    margin-top: 20px;
 
     p {
-        text-align: center;
+        margin-bottom: 10px;
     }
 
     a {
-        background: #FFF;
+        color: $link-color;
         text-decoration: none;
-        margin: 30px;
-        color: rgb(0, 0, 0);
-        border-radius: 100px;
-        width: 70px;
-        height: 70px;
-        display: inline-block;
-        line-height: 95px;
-        transition: all 0.5s;
+        margin: 0 10px;
+        transition: color $transition;
 
-        &:hover {
-            background: red;
-            color: white;
-        }
-    }
-}
-
-.menu {
-    display: none;
-}
-
-.mostrar {
-    display: block;
-}
-
-
-
-@media (max-width: 420px) {
-    .banner {
-        display: none;
-    }
-
-    header {
-        img {
-            display: none;
-            width: 300px;
+        i {
+            transition: color $transition;
         }
 
-        nav {
-            display: none;
-
-            ul {
-                display: block;
-                text-align: center;
-                margin: 0;
-                padding: 0;
-
-                li {
-                    width: 100%;
-                }
-            }
+        &:hover i {
+            color: #bbb;
         }
-    }
-
-    main {
-        width: 100%;
-    }
-
-    .grid {
-        grid-template-columns: 100%;
-    }
-
-    .menu {
-        display: block;
-        border: 1px solid red;
-        padding: 10px 15px;
-        color: white;
-        float: right;
-        margin-top: 15px;
-        border-radius: 5px;
     }
 }
