@@ -142,4 +142,45 @@ footer a:hover i {
   color: #bbb;
 }
 
+@media (max-width: 420px) {
+  .banner {
+    display: none;
+  }
+
+  header img {
+    display: none;
+    width: 300px;
+  }
+  header nav {
+    display: none;
+  }
+  header nav ul {
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  header nav ul li {
+    width: 100%;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: 100%;
+  }
+
+  .menu {
+    display: block;
+    border: 1px solid red;
+    padding: 10px 15px;
+    color: white;
+    float: right;
+    margin-top: 15px;
+    border-radius: 5px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
