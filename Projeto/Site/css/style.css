@@ -196,6 +196,11 @@ h4 {
   color: #f4d24f;
 }
 
+.card {
+  background: #1F2833;
+  color: #06BFFF;
+}
+
 @media (min-width: 480px) and (max-width: 1920px) {
   .header-menu {
     display: none !important;

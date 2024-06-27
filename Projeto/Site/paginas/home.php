@@ -68,33 +68,6 @@
                 </div>
             </div>
         </div>
-
-
-        <!--</div> API
-        <h2>Outros jogos</h2>
-        <div class="row">
-            <?php
-            $url = "https://www.cheapshark.com/api/1.0/games?title=batman";
-            $dados = file_get_contents($url);
-            $dados = json_decode($dados);
-
-            foreach ($dados as $jogo) {
-            ?>
-                <div class="col-12 col-md-2 text-center">
-                    <div class="card">
-                        <img src="<?php echo $jogo->thumb; ?>" alt="<?php echo $jogo->title; ?>" class="text-center" class="w-100">
-                        <p class="title">
-                            <strong>
-                                <?php echo $jogo->external; ?>
-                            </strong>
-                        </p>
-                        <p class="btn btn-success">Preço: $<?php echo $jogo->cheapest; ?></p>
-                    </div>
-                </div>
-            <?php
-            }
-            ?>
-        </div>-->
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

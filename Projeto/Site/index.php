@@ -49,6 +49,7 @@ $base_url = "curl --location 'https://www.cheapshark.com/api/1.0/games?id=612'";
                         <li><a class="dropdown-item hover" href="meu-jogo" id="negrito2">Jornada de Coragem</a></li>
                         <li><a class="dropdown-item hover" href="jogo2" id="negrito2">Forza Horizon 5</a></li>
                         <li><a class="dropdown-item hover" href="jogo3" id="negrito2">Lenhador da Redenção</a></li>
+                        <li><a class="dropdown-item hover" href="api" id="negrito2">API de jogos</a></li>
 
                     </ul>
                 </li>
