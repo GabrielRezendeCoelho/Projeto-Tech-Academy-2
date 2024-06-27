@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo de API</title>
+    <title>home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
@@ -14,67 +14,59 @@
         </div>
         <div id="carouselExampleIndicators" class="carousel slide">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
-            <div class="carousel-inner "data-aos="fade-down">
+            <div class="carousel-inner" data-aos="fade-down">
                 <div class="carousel-item active">
 
-                    <a href="meu-jogo" title="Meu jogo">
-                        <img src="imagens/novobanner.jpg" class="d-block w-100" alt="Banner do jogo"
-                            id="formatar-carossel">
+                    <a href="meu-jogo" title="Meu jogo" id="carousel-inner">
+                        <img src="imagens/novobanner.jpg" class="d-block w-100" alt="Banner do jogo" id="formatar-carossel">
                     </a>
                 </div>
 
                 <div class="carousel-item">
-                    <img src="imagens/novobanner.jpg" class="d-block w-100" alt="Banner do jogo" id="formatar-carossel">
+                    <img src="imagens/bannerforza.jpg" class="d-block w-100" alt="Banner do jogo" id="formatar-carossel">
                 </div>
-
                 <div class="carousel-item">
-                    <img src="imagens/novobanner.jpg" class="d-block w-100" alt="Banner do jogo" id="formatar-carossel">
+                    <img src="imagens/bannerlenhador.jpg" class="d-block w-100" alt="Banner do jogo" id="formatar-carossel">
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-        <h1 class="text-center">outros jogos</h1>
+        <h4 class="text-center">outros jogos</h4>
         <div class="row justify-content-center font">
             <div class="card m-3 centro" style="width: 22rem;" id="gridJogos" data-aos="fade-right">
                 <img src="imagens/novobanner.jpg" class="card-img-top" alt="..." id="imagem-logo">
                 <div class="card-body">
-                    <h5 class="card-title">Jogo 1</h5>
-                    <a href="meu-jogo" class="btn btn-info" id="margin">Informações</a>
+                    <h4 class="card-title">Jogo 1</h4>
+                    <a href="meu-jogo" class="btn btn-secondary" id="margin">Informações</a>
                 </div>
             </div>
 
             <div class="card m-3 centro" style="width: 22rem;" id="gridJogos" data-aos="fade-up">
-                <img src="imagens/novobanner.jpg" class="card-img-top" alt="..." id="imagem-logo">
+                <img src="imagens/bannerforza.jpg" class="card-img-top" alt="..." id="imagem-logo">
                 <div class="card-body">
-                    <h5 class="card-title">Jogo 2</h5>
-                    <a href="jogo2" class="btn btn-info" id="margin">Informações</a>
+                    <h4 class="card-title">Jogo 2</h4>
+                    <a href="jogo2" class="btn btn-secondary" id="margin">Informações</a>
                 </div>
             </div>
 
             <div class="card m-3 centro" style="width: 22rem;" id="gridJogos" data-aos="fade-left">
-                <img src="imagens/novobanner.jpg" class="card-img-top" alt="..." id="imagem-logo">
+                <img src="imagens/bannerlenhador.jpg" class="card-img-top" alt="..." id="imagem-logo">
                 <div class="card-body">
-                    <h5 class="card-title">Jogo 3</h5>
-                    <a href="jogo3" class="btn btn-info" id="margin">Informações</a>
+                    <h4 class="card-title">Jogo 3</h4>
+                    <a href="jogo3" class="btn btn-secondary" id="margin">Informações</a>
                 </div>
             </div>
-                
         </div>
 
 

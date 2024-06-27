@@ -6,5 +6,8 @@
 
         <label for="email">Digite seu email:</label>
         <input type="email" name="email" id="email" required placeholder="Digite um email valido" class="form-control">
+        <br>
+        <button type="button" class="btn btn-success">Enviar</button>
+        <button type="button" class="btn btn-danger" id="margin">Cancelar</button>
     </form>
 </div>

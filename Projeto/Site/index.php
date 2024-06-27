@@ -8,14 +8,13 @@ $base_url = "curl --location 'https://www.cheapshark.com/api/1.0/games?id=612'";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu jogo</title>
+    <title>Site - Projeto Tech Academy 2º modulo</title>
 
-    <base href="http://localhost/projeto/site/"> <!-- ALTERAR PARA ENDEREÇO DO NOVO SERVIDOR-->
+    <base href="http://www.gabrielrezendecoelho.x10.mx">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/style.css">
-
     <link rel="shortcut icon" href="imagens/foto4.jpg">
 
 </head>
@@ -39,23 +38,21 @@ $base_url = "curl --location 'https://www.cheapshark.com/api/1.0/games?id=612'";
 
         <nav class="header-nav" data-aos="fade-left">
             <ul>
-                <li><a href="home" title="Home">Home</a></li>
-                <li><a href="sobre" title="Sobre">Sobre</a></li>
-                <!--<li><a href="jogos" title="Jogos">Jogos</a></li>-->
+                <li><a href="home" title="Home" id="negrito">Home</a></li>
+                <li><a href="sobre" title="Sobre" id="negrito">Sobre</a></li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                    <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="negrito">
                         Jogos
                     </a>
                     <ul class="dropdown-menu" id="grid-nav">
 
-                        <li><a class="dropdown-item hover" href="meu-jogo">Jornada de Coragem</a></li>
-                        <li><a class="dropdown-item hover" href="jogo2">Jogo 1</a></li>
-                        <li><a class="dropdown-item hover" href="jogo3">Jogo 2</a></li>
+                        <li><a class="dropdown-item hover" href="meu-jogo" id="negrito2">Jornada de Coragem</a></li>
+                        <li><a class="dropdown-item hover" href="jogo2" id="negrito2">Forza Horizon 5</a></li>
+                        <li><a class="dropdown-item hover" href="jogo3" id="negrito2">Lenhador da Redenção</a></li>
 
                     </ul>
                 </li>
-                <li><a href="contato" title="Contato">Contato</a></li>
+                <li><a href="contato" title="Contato" id="negrito">Contato</a></li>
             </ul>
         </nav>
 

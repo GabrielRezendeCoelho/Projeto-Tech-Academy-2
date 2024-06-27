@@ -4,14 +4,14 @@
 }
 
 body {
-  color: #FFF;
-  background: #1F1D1B !important;
+  color: #c5c6c7;
+  background: #1F2833 !important;
   font-size: 16px;
   margin-top: 120px;
 }
 
 main {
-  background: #1F1D1B;
+  background: #1F2833;
   padding-top: 100px;
   padding-bottom: 100px;
 }
@@ -35,7 +35,7 @@ main {
 }
 .flex-coluna {
   width: 100%;
-  border: 1px solid #06BFFF;
+  border: 1px solid #c5c6c7;
   border-radius: 10px;
   margin-bottom: 10px;
 }
@@ -44,9 +44,21 @@ main {
   border-radius: 10px;
 }
 
-h2 {
-  color: #06BFFF;
+h1 {
+  color: #06BFFF !important;
   text-align: center;
+  padding: 30px;
+}
+
+h2 {
+  color: #fc0f17;
+  text-align: center;
+}
+
+h4 {
+  color: #67fbf2 !important;
+  text-align: center;
+  padding: 30px;
 }
 
 .center {
@@ -68,32 +80,56 @@ h2 {
   width: 98%;
 }
 
+#negrito {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#negrito2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #67fbf2;
+}
+
 #logo {
-  width: 125px;
-  border-radius: 100px;
+  width: 100px;
+  border-radius: 10px;
+  box-shadow: 0 0 7px red;
 }
 
 #formatar-carossel {
   border-radius: 10px;
+  max-width: 1500px;
+  max-height: 800px;
+  min-width: 300px;
+  min-height: 200px;
+}
+
+#formatar-foto {
+  border-radius: 10px;
+  max-width: 200px;
+  max-height: 200px;
 }
 
 #gridJogos {
   text-align: center !important;
-  background: #1F1D1B;
+  background: #1F2833;
 }
 
 #grid-nav {
-  background-color: #171A21 !important;
+  background-color: #0b0c10 !important;
   color: #06BFFF;
 }
 
 .hover:hover {
-  background-color: red !important;
+  background-color: #1F2833 !important;
+  border-radius: 10px;
+  width: auto;
 }
 
 .header {
-  background: #171A21;
-  box-shadow: 0 0 10px #000;
+  background: #0b0c10;
+  box-shadow: 0 0 7px #67fbf2;
   width: 100%;
   position: fixed;
   padding: 15px;
@@ -101,20 +137,20 @@ h2 {
   top: 0;
   z-index: 9;
 }
-.header-logo {
+.header .header-logo {
   float: left;
 }
-.header-logo img {
+.header .header-logo img {
   width: 200px;
 }
-.header-menu {
+.header .header-menu {
   float: right;
   border: 1px solid #FFF;
   background: #CCC;
   padding: 5px;
   border-radius: 10px;
 }
-.header-menu img {
+.header .header-menu img {
   width: 35px;
 }
 .header-nav {
@@ -139,12 +175,12 @@ h2 {
 }
 
 .footer {
-  background: #171A21;
-  color: #FFF;
+  background: #0b0c10;
+  color: #c5c6c7;
   text-align: center;
   padding: 20px;
   box-sizing: border-box;
-  box-shadow: 0 0 10px #000;
+  box-shadow: 0 0 5px #67fbf2;
   position: fixed !important;
   bottom: 0 !important;
   width: 100% !important;
@@ -152,6 +188,12 @@ h2 {
 
 .title {
   height: 60px;
+}
+
+#margin {
+  margin: 5px;
+  font-weight: bold;
+  color: #f4d24f;
 }
 
 @media (min-width: 480px) and (max-width: 1920px) {
@@ -193,6 +235,9 @@ h2 {
     line-height: 25px;
     margin-bottom: 20px;
   }
+}
+.iframeGame {
+  display: none !important;
 }
 
 /*# sourceMappingURL=style.css.map */
